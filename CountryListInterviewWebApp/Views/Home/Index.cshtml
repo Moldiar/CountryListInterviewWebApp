@@ -1,0 +1,40 @@
+﻿@using CountryListInterview.Models.Interfaces;
+@using CountryListInterview.Models.Types;
+@using CountryListInterviewWebApp.Models;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Country List</h1>
+</div>
+
+<div class="row">
+    @{
+
+        @Html.ActionLink("Refresh Page", "Index", "Home", new { @class = "btn btn-success" })
+        ICountryHandler countryHandler = new CountryHandler();
+
+        var listOfCountries = countryHandler.GetCountries();
+
+        <table style="width:100%">
+            <caption>Country List</caption>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Capitol</th>
+                </tr>
+
+            @foreach (var country in listOfCountries)
+            {
+                <tr>
+                    <td>@country.Id.ToString()</td>
+                    <td>@country.Name</td>
+                    <td>@country.Capitol</td>
+                </tr>
+            }
+
+</table>
+    }
+</div>

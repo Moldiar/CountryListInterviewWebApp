@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <NextId>4</NextId>
+  <Countries>
+    <Country Id="1">
+      <Name>Poland</Name>
+      <Capitol>Warsaw</Capitol>
+    </Country>
+    <Country Id="3">
+      <Name>Ireland</Name>
+      <Capitol>Belfast</Capitol>
+    </Country>
+  </Countries>
+</Root>
